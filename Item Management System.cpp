@@ -120,7 +120,11 @@ public:
         }
     }
       
-
+    void totalmoney(){
+        std::cout<<"\nThe amount of money you have is "<<total_money<<"\n";
+        return;
+    }
+    
     void list_items() {
         if (item_count == 0) {
             std::cout << "\nInventory empty.";
@@ -145,7 +149,8 @@ int main() {
                   << "1. Add new item\n"
                   << "2. Sell item\n"
                   << "3. List items\n"
-                  << "4. Exit\n\n"
+                  << "4. Display Amount of Money\n"
+                  << "5. Exit\n\n"
                   << "Enter your choice: ";
         std::cin >> choice;
 
@@ -163,6 +168,10 @@ int main() {
                 break;
 
             case 4:
+                inventory_system.totalmoney();
+                break;
+          
+            case 5:
                 exit(0);
 
             default:
